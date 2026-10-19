@@ -9,28 +9,30 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.com.saitodev</groupId>
-	<artifactId>financetracker</artifactId>
+	<artifactId>finance-tracker</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name/>
-	<description/>
-	<url/>
+	<name>Finance Tracker</name>
+	<description>API REST de controle financeiro pessoal com Java, Spring Boot, SQL Server e Docker</description>
+	<url>https://github.com/SEU-USUARIO/finance-tracker</url>
 	<licenses>
-		<license/>
+		<license>
+			<name>MIT License</name>
+			<url>https://opensource.org/licenses/MIT</url>
+		</license>
 	</licenses>
 	<developers>
-		<developer/>
+		<developer>
+			<name>Saito</name>
+		</developer>
 	</developers>
 	<scm>
-		<connection/>
-		<developerConnection/>
-		<tag/>
-		<url/>
+		<url>https://github.com/SEU-USUARIO/finance-tracker</url>
 	</scm>
 	<properties>
-    	<java.version>25</java.version>
-    <!-- Contorno temporário: maven-jar-plugin 3.5.0 não é compatível com o m2e do Eclipse -->
-    	<maven-jar-plugin.version>3.4.2</maven-jar-plugin.version>
-	</properties>	
+		<java.version>25</java.version>
+		<!-- Contorno temporário: maven-jar-plugin 3.5.0 não é compatível com o m2e do Eclipse -->
+		<maven-jar-plugin.version>3.4.2</maven-jar-plugin.version>
+	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
