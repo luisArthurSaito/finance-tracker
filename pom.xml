@@ -26,7 +26,7 @@
 		</developer>
 	</developers>
 	<scm>
-		<url>https://github.com/SEU-USUARIO/finance-tracker</url>
+		<url>https://github.com/luisArthurSaito/finance-tracker</url>
 	</scm>
 	<properties>
 		<java.version>25</java.version>
