@@ -8,6 +8,7 @@ import java.util.List;
 import br.com.saitodev.financetracker.model.Categoria;
 import br.com.saitodev.financetracker.model.TipoTransacao;
 import br.com.saitodev.financetracker.model.Transacao;
+import br.com.saitodev.financetracker.service.RelatorioService;
 
 public class demo {
 
@@ -29,5 +30,11 @@ public class demo {
             saldo = saldo.add(t.getValorComSinal());
         }
         System.out.println("Saldo: R$ " + saldo);
+        
+        System.out.println("==================");
+        
+        
+        RelatorioService relatorio = new RelatorioService();
+        System.out.println("Saldo (Streams): R$ " + relatorio.calcularSaldo(transacoes));
     }
 }
