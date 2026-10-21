@@ -62,9 +62,23 @@ class RelatorioServiceTest {
     	Optional<Transacao> maior = service.maiorDespesa(transacoes);
     	
     	assertThat(maior).isPresent();
-        assertThat(maior.get().getDescricao()).isEqualTo("Lanche");
+        assertThat(maior.get().getDescricao()).isEqualTo("Mercado");
     }
     
+    @Test
+    void naoHaMaiorDespesaQuandoAListaEstaVazia() {
+        assertThat(service.maiorDespesa(List.of())).isEmpty();
+    }
+
+    @Test
+    void somaOsGastosDeCadaMesEmOrdemCronologica() {
+        Map<YearMonth, BigDecimal> porMes = service.gastoPorMes(transacoes);
+
+        assertThat(porMes.keySet()).containsExactly(YearMonth.of(2026, 9), YearMonth.of(2026, 10));
+        assertThat(porMes.get(YearMonth.of(2026, 9))).isEqualByComparingTo("150.00");
+        assertThat(porMes.get(YearMonth.of(2026, 10))).isEqualByComparingTo("364.40");
+    }
+ 
 }
     
     
